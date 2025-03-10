@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: #28a745;
+    color: white;
+    padding: 15px 0; /* Espaçamento interno 15px acima e abaixo; 0px à esquerda e direita */
+    font-size: 24px;
+}
+
+nav {
+    background-color: #007bff;
+    padding: 10px;
+    display: flex; /* Flex Boxing */
+    justify-content: space-between; /* Alinhamento horizontal - espaço entre os links */
+    align-items: center; /* Alinhamento vertical */
+}
+
+#links-menu {
+    display: flex;
+    gap: 15px;
+}
+
+nav a { /* Configura o estilo das âncoras que estão dentro do nav */
+    color: white; /* Texto branco */
+    text-decoration: none; /* Não faz decoração no link */
+    padding: 10px 15px; /* 10px acima e abaixo, 15px esquerda e direita */
+    font-size: 18px; /* 18px de tamanho da fonte */
+    background: #005663; /* cor de funto */
+    border-radius: 5px; /* borda com canto arredondado */
+}
