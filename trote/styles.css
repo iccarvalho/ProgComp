@@ -31,7 +31,7 @@ nav a { /* Configura o estilo das âncoras que estão dentro do nav */
     text-decoration: none; /* Não faz decoração no link */
     padding: 10px 15px; /* 10px acima e abaixo, 15px esquerda e direita */
     font-size: 18px; /* 18px de tamanho da fonte */
-    background: #344f8a; /* cor de funto */
+    background: #344f8a; /* cor de fundo */
     border-radius: 5px; /* borda com canto arredondado */
 }
 
