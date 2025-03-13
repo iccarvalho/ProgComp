@@ -7,14 +7,14 @@ body {
 }
 
 header {
-    background: #28a745;
+    background: #344f8a;
     color: white;
     padding: 15px 0; /* Espaçamento interno 15px acima e abaixo; 0px à esquerda e direita */
     font-size: 24px;
 }
 
 nav {
-    background-color: #007bff;
+    background-color: #f4f4f4;
     padding: 10px;
     display: flex; /* Flex Boxing */
     justify-content: space-between; /* Alinhamento horizontal - espaço entre os links */
@@ -23,7 +23,7 @@ nav {
 
 #links-menu {
     display: flex;
-    gap: 15px;
+    gap: 40px;
 }
 
 nav a { /* Configura o estilo das âncoras que estão dentro do nav */
@@ -31,6 +31,28 @@ nav a { /* Configura o estilo das âncoras que estão dentro do nav */
     text-decoration: none; /* Não faz decoração no link */
     padding: 10px 15px; /* 10px acima e abaixo, 15px esquerda e direita */
     font-size: 18px; /* 18px de tamanho da fonte */
-    background: #005663; /* cor de funto */
+    background: #344f8a; /* cor de funto */
     border-radius: 5px; /* borda com canto arredondado */
+}
+
+nav a:hover {
+    background: #003d82;
+
+}
+
+img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px; /* espaçamento externo à direita em 20px*/
+    border-radius: 10px;
+    box-shadow: 0 2px 4px;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto; /* 20px em cima e embaixo e automática à esquerda e direita */
+    background: white;
+    padding: 20px; /* espaçamento interno para todos os lados */
+    border-radius: 10px;
+    text-align: justify;
 }
