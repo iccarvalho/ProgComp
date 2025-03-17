@@ -33,3 +33,7 @@ button:hover { /* Ao passar o mouse em cima do botão */
     height: 100px; /* Altura */
     margin-bottom: 10px; /* Espaçamento externo abaixo */
 }
+
+td {
+    padding: 20px;
+}
