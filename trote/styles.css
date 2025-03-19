@@ -71,3 +71,15 @@ th, tr, td {
     padding: 8px 10px;
     border: 1px solid black;
 }
+
+.fonte {
+    caption-side: bottom;
+    font-style: italic;
+    font-size: small;
+}
+
+thead {
+    background-color: #344f8a;
+    color: white;
+    text-align: center;
+}
