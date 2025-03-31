@@ -26,55 +26,57 @@
             <img src="img/trote2025.jpg" alt="Trote Solidário 2025">
         </nav>
         <div class="container">
-            <h2>CALCULADORAS DE PONTUAÇÃO</h2>
+            <h2>CALCULADORA DE PONTUAÇÃO</h2>
             <form action=""> <!-- Formulário de entrada de dados do usuário -->
                 <div class="campos">
-                    <label for="">Ação Social</label>
+                    <label>Selecione a cor da equipe</label>
+                    <select id="equipe">
+                        <option value="Laranja">Laranja</option>
+                        <option value="Preta">Preta</option>
+                        <option value="Roxa">Roxa</option>
+                        <option value="Verde">Verde</option>
+                        <option value="Vermelho">Vermelho</option>
+                    </select>
+                </div>
+                <div class="campos">
+                    <label>Ação Social</label>
                     <input type="number" id="acaoSocial">
                 </div>
                 <div class="campos">
-                    <label for="">homenagem</label>
+                    <label>homenagem</label>
                     <input type="number" id="homenagem">
                 </div>
                 <div class="campos">
-                    <label for="">Caixas de Leite (litros)</label>
+                    <label>Caixas de Leite (litros)</label>
                     <input type="number" id="leite">
                 </div>
                 <div class="campos">
-                    <label for="">Kit Alimentação (avulso)</label>
-                    <input type="number" id="kitAvulso">
+                    <label>Kit Alimentação</label>
+                    <input type="number" id="kit">
                 </div>
                 <div class="campos">
-                    <label for="">Lata de Suplemento (avulso)</label>
-                    <input type="number" id="suplAvulso">
+                    <label>Lata de Suplemento</label>
+                    <input type="number" id="suplemnto">
                 </div>
                 <div class="campos">
-                    <label for="">Pacote de Arroz (5kg)</label>
-                    <input type="number" id="arroz5">
-                </div>
-                <div class="campos">
-                    <label for="">Pacote de Arroz (1kg)</label>
+                    <label>Pacote de Arroz (kg)</label>
                     <input type="number" id="arroz">
                 </div>
                 <div class="campos">
-                    <label for="">Pacote de Feijão (2kg)</label>
-                    <input type="number" id="feijao2">
-                </div>
-                <div class="campos">
-                    <label for="">Pacote de Feijão (1kg)</label>
+                    <label>Pacote de Feijão (kg)</label>
                     <input type="number" id="feijao">
                 </div>
                 <div class="campos">
-                    <label for="">Pacote de Macarrão de (400/500g)</label>
+                    <label>Pacote de Macarrão (400/500g)</label>
                     <input type="number" id="macarrao">
                 </div>
                 <div class="campos">
-                    <label for="">Óleo (900 ml)</label>
+                    <label>Óleo (900 ml)</label>
                     <input type="number" id="oleo">
                 </div>
                 <div class="campos">
                     <button type="button" onclick="calcular()">Calcular</button>
-                    <label for="" id="soma"></label>
+                    <label id="soma"></label>
                 </div>
             </form>
         </div> 
