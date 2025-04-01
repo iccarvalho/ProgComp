@@ -45,6 +45,30 @@ function calcular(){
         } else {
             pontosKitSupl = kit*30 + supl*15;
         }
+    } else if (equipe == "Roxa") { // equipe roxa
+        if (kit >= 102 && supl >= 51) {
+            pontosKitSupl = 5000 + ((kit-102)*30) + ((supl-51)*15);
+        } else if (kit >= 82 && supl >= 41) {
+            pontosKitSupl = 4000 + ((kit-82)*30) + ((supl-41)*15);
+        } else if (kit >= 51 && supl >= 26) {
+            pontosKitSupl = 2500 + ((kit-51)*30) + ((supl-26)*15);
+        } else if (kit >= 20 && supl >= 10) {
+            pontosKitSupl = 1000 + ((kit-20)*30) + ((supl-10)*15);
+        } else {
+            pontosKitSupl = kit*30 + supl*15
+        }
+    } else if (equipe == "Verde") {
+        if (kit >= 88 && supl >= 44) {
+            pontosKitSupl = 5000 + ((kit-88)*30) + ((supl-44)*15);
+        } else if (kit >= 70 && supl >= 35) {
+            pontosKitSupl = 4000 + ((kit-70)*30) + ((supl-35)*15);
+        } else if (kit >= 44 && supl >= 22) {
+            pontosKitSupl = 2500 + ((kit-44)*30) + ((supl-22)*15);
+        } else if (kit >= 18 && supl >= 9) {
+            pontosKitSupl = 1000 + ((kit-18)*30) + ((supl-9)*15);
+        } else {
+            pontosKitSupl = kit*30 + supl*15
+        }
     }
     alert(pontosKitSupl)
     soma += pontosKitSupl // soma a pontuação do kit e suplemento a pontuação total
