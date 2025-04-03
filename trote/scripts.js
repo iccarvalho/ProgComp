@@ -57,7 +57,7 @@ function calcular(){
         } else {
             pontosKitSupl = kit*30 + supl*15
         }
-    } else if (equipe == "Verde") {
+    } else if (equipe == "Verde") { // equipe verde
         if (kit >= 88 && supl >= 44) {
             pontosKitSupl = 5000 + ((kit-88)*30) + ((supl-44)*15);
         } else if (kit >= 70 && supl >= 35) {
@@ -69,8 +69,19 @@ function calcular(){
         } else {
             pontosKitSupl = kit*30 + supl*15
         }
+    } else { // equipe vermelha
+        if (kit >= 93 && supl >=47) {
+            pontosKitSupl = 5000 + ((kit-93)*30) + ((supl-47)*15);
+        } else if (kit >= 74 && supl >= 38) {
+            pontosKitSupl = 4000 + ((kit-74)*30) + ((supl -38)*15);
+        } else if (kit >= 47 && supl >= 24) {
+            pontosKitSupl = 2500 + ((kit-47)*30) + ((supl-24)*15);
+        } else if (kit >= 19 && supl >= 9) {
+            pontosKitSupl = 1000 + ((kit-19)*30) + ((supl-9)*15);
+        } else {
+            pontosKitSupl = kit*30 + supl*15
+        }
     }
-    alert(pontosKitSupl)
     soma += pontosKitSupl // soma a pontuação do kit e suplemento a pontuação total
 
     document.getElementById("soma").innerHTML = soma.toFixed(2); // devolve o resultado para o HTML
