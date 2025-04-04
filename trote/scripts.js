@@ -20,7 +20,7 @@ function calcular(){
 
     let kit = Number(document.getElementById("kit").value);
     let supl = Number(document.getElementById("supl").value);
-    let pontosKitSupl = 0
+    let pontosKitSupl = 0;
     if (equipe == "Laranja") { // equipe laranja
         if (kit >= 97 && supl >= 49) {
             pontosKitSupl = 5000 + ((kit-97)*30) + ((supl-49)*15); // pontuação do kit e suplamento
@@ -31,7 +31,7 @@ function calcular(){
         } else if (kit >= 19 && supl >= 10) {
             pontosKitSupl = 1000 + ((kit-19)*30) + ((supl-10)*15); // pontuação do kit e suplemento
         } else {
-            pontosKitSupl = kit*30 + supl*15;
+            pontosKitSupl = 0;
         }
     } else if (equipe == "Preta") { // equipe preta
         if (kit >= 103 && supl >= 52) {
@@ -43,7 +43,7 @@ function calcular(){
         } else if (kit >= 21 && supl >+ 10) {
             pontosKitSupl = 1000 + ((kit-21)*30) + ((supl-10)*10);
         } else {
-            pontosKitSupl = kit*30 + supl*15;
+            pontosKitSupl = 0;
         }
     } else if (equipe == "Roxa") { // equipe roxa
         if (kit >= 102 && supl >= 51) {
@@ -55,7 +55,7 @@ function calcular(){
         } else if (kit >= 20 && supl >= 10) {
             pontosKitSupl = 1000 + ((kit-20)*30) + ((supl-10)*15);
         } else {
-            pontosKitSupl = kit*30 + supl*15
+            pontosKitSupl = 0;
         }
     } else if (equipe == "Verde") { // equipe verde
         if (kit >= 88 && supl >= 44) {
@@ -67,7 +67,7 @@ function calcular(){
         } else if (kit >= 18 && supl >= 9) {
             pontosKitSupl = 1000 + ((kit-18)*30) + ((supl-9)*15);
         } else {
-            pontosKitSupl = kit*30 + supl*15
+            pontosKitSupl = 0;
         }
     } else { // equipe vermelha
         if (kit >= 93 && supl >=47) {
@@ -79,10 +79,47 @@ function calcular(){
         } else if (kit >= 19 && supl >= 9) {
             pontosKitSupl = 1000 + ((kit-19)*30) + ((supl-9)*15);
         } else {
-            pontosKitSupl = kit*30 + supl*15
+            pontosKitSupl = 0;
         }
     }
-    soma += pontosKitSupl // soma a pontuação do kit e suplemento a pontuação total
+    soma += pontosKitSupl; // soma a pontuação do kit e suplemento a pontuação total
+
+    let sangue = Number(document.getElementById("sangue").value);
+    let pontosSangue = 0;
+
+    if (equipe == "Laranja") {
+        if (sangue >= 49) {
+            pontosSangue = 2500 + ((sangue-49)*20);
+        } else {
+            pontosSangue = sangue*20;
+        }
+    } else if (equipe == "Preta") {
+        if (sangue >= 52) {
+            pontosSangue = 2500 + ((sangue-52)*20);
+        } else {
+            pontosSangue = sangue*20;
+        }
+    } else if (equipe == "Roxa") {
+        if (sangue >= 51) {
+            pontosSangue = 2500 + ((sangue-51)*20);
+        } else {
+            pontosSangue = sangue*20;
+        }
+    } else if (equipe == "Verde") {
+        if (sangue >= 44) {
+            pontosSangue = 2500 + ((sangue-44)*20);
+        } else {
+            pontosSangue = sangue*20;
+        }
+    } else {
+        if (sangue >= 47) {
+            pontosSangue = 2500 + ((sangue-47)*20);
+        } else {
+            pontosSangue = sangue*20;
+        }
+    }
+
+    soma += pontosSangue;
 
     document.getElementById("soma").innerHTML = soma.toFixed(2); // devolve o resultado para o HTML
 }

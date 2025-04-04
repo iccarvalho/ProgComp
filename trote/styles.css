@@ -30,7 +30,7 @@ nav a { /* Configura o estilo das âncoras que estão dentro do nav */
     color: white; /* Texto branco */
     text-decoration: none; /* Não faz decoração no link */
     padding: 10px 12px; /* 10px acima e abaixo, 15px esquerda e direita */
-    font-size: 18px; /* 18px de tamanho da fonte */
+    font-size: 15px; /* 18px de tamanho da fonte */
     background: #344f8a; /* cor de fundo */
     border-radius: 5px; /* borda com canto arredondado */
 }
@@ -68,18 +68,6 @@ table {
     margin: auto;
     width: 50%;
     height: auto
-}
-
-#tab3 {
-    width: 80%;
-}
-
-#tab5 {
-    width: 30%;
-}
-
-#tab6 {
-    width: 55%;
 }
 
 th, tr, td {
@@ -150,4 +138,22 @@ thead {
 
 .campos {
     margin: 20px;
+}
+
+form {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    background: #344f8a;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: auto;
 }
