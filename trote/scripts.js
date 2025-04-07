@@ -119,7 +119,7 @@ function calcular(){
         }
     }
 
-    soma += pontosSangue;
+    soma += pontosSangue; // soma a pontuação da doação de sangue a pontuação total
 
     document.getElementById("soma").innerHTML = soma.toFixed(2); // devolve o resultado para o HTML
 }
