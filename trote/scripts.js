@@ -87,31 +87,31 @@ function calcular(){
     let sangue = Number(document.getElementById("sangue").value);
     let pontosSangue = 0;
 
-    if (equipe == "Laranja") {
+    if (equipe == "Laranja") { // equipe laranja
         if (sangue >= 49) {
             pontosSangue = 2500 + ((sangue-49)*20);
         } else {
             pontosSangue = sangue*20;
         }
-    } else if (equipe == "Preta") {
+    } else if (equipe == "Preta") { // equipe preta
         if (sangue >= 52) {
             pontosSangue = 2500 + ((sangue-52)*20);
         } else {
             pontosSangue = sangue*20;
         }
-    } else if (equipe == "Roxa") {
+    } else if (equipe == "Roxa") { // equipe roxa
         if (sangue >= 51) {
             pontosSangue = 2500 + ((sangue-51)*20);
         } else {
             pontosSangue = sangue*20;
         }
-    } else if (equipe == "Verde") {
+    } else if (equipe == "Verde") { // equipe verde
         if (sangue >= 44) {
             pontosSangue = 2500 + ((sangue-44)*20);
         } else {
             pontosSangue = sangue*20;
         }
-    } else {
+    } else { // equipe vermelha
         if (sangue >= 47) {
             pontosSangue = 2500 + ((sangue-47)*20);
         } else {
