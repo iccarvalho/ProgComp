@@ -41,7 +41,7 @@ function calcular(){
         } else if (kit >= 52 && supl >= 26) {
             pontosKitSupl = 2500 + ((kit-52)*30) + ((supl-26)*15);
         } else if (kit >= 21 && supl >+ 10) {
-            pontosKitSupl = 1000 + ((kit-21)*30) + ((supl-10)*10);
+            pontosKitSupl = 1000 + ((kit-21)*30) + ((supl-10)*15);
         } else {
             pontosKitSupl = 0;
         }
