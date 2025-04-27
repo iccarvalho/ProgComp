@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     text-align: center;
+    box-sizing: border-box;
 }
 
 header {
@@ -19,6 +20,8 @@ nav {
     display: flex; /* Flex Boxing */
     justify-content: space-between; /* Alinhamento horizontal - espaço entre os links */
     align-items: center; /* Alinhamento vertical */
+    justify-content: center;
+    align-content: center;
 }
 
 #links-menu {
@@ -40,12 +43,13 @@ nav a:hover {
 
 }
 
-img {
-    width: 80px;
+nav img {
+    width: 70px;
     height: auto;
-    margin-right: 5px; /* espaçamento externo à direita em 20px*/
     border-radius: 10px;
     box-shadow: 0 2px 4px;
+    position: absolute;
+    right: 20px;
 }
 
 .container {
