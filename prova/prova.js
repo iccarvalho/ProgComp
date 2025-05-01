@@ -29,6 +29,6 @@ function calcularPontuacao() {
             bonus = participacoes*1.5;
         }
     }
-    soma += bunus;
+    soma += bonus;
     soma = document.getElementById("soma").innerHTML;
 }
