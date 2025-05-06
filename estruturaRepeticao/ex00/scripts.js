@@ -3,13 +3,13 @@ function ex00(){
     let count = 1;
     let soma = 0;
     
-    while(count <= 4){
-        nota = Number(prompt(`Informe a nota ${count}: `));
+    while(count <= 6){
+        nota = Number(prompt(`Informe a nota ${count}:`));
         soma += nota;
-        count++;
+        count++; // incrementa 1
     }
-    let media = soma / 4;
-    alert(`A média das notas é: ${media.toFixed(2)}`);
+    let media = soma / 6;
+    alert(`A média das notas é: ${media.toFixed(1)}`);
     if(media >= 6){
         alert(`Aprovado!`);
     } else {
