@@ -8,18 +8,18 @@ function pesquisaSatisfacao() {
 
     while (count <= participantes) {
         nota = Number(prompt(`Participante ${count}, avalie o festival de 0 a 10`));
-        count++;
-        soma += nota;
-        if (nota >= 8) {
+        if (nota >= 8 && nota <= 10) {
             satisfeito++;
-        }
-        if (nota < 5) {
+        } else if (nota >= 0 && nota < 5) {
             insatisfeito++;   
+        } else if (nota < 0 || nota > 10) {
+            alert(`Nota inválida!`);
+            continue // volta para o início, sem executar as próximas linhas
         }
+        soma += nota;
+        count++;
     }
     let media = soma/10;
 
-    alert(`Média das notas: ${media.toFixed(1)}\n` +
-        `Total de pessoas satisfeitas: ${satisfeito}\n` +
-        `Total de pessoas insatisfeitas: ${insatisfeito}`);
+    alert(`Média das notas: ${media.toFixed(1)}\n` + `Total de pessoas satisfeitas: ${satisfeito}\n` + `Total de pessoas insatisfeitas: ${insatisfeito}`);
 }
