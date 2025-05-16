@@ -1,4 +1,4 @@
-function atv03() {
+function exe03() {
     let count = 1;
     let faixa1 = 0, faixa2 = 0, faixa3 = 0, faixa4 = 0, faixa5 = 0;
 

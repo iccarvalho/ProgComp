@@ -1,4 +1,4 @@
-function atv01() {
+function exe01() {
     let a, b, c, d, aux;
     let grupo = 1;
     let count = 1;

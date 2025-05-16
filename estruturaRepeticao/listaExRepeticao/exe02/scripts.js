@@ -1,4 +1,4 @@
-function atv02() {
+function exe02() {
     let preco = 5;
     let qtde = 120;
     const despesa = 200;
