@@ -40,17 +40,16 @@ function ex003(){
     }
 
     // 
-    let somaRegioes = [];
+    let mediaRegioes = [];
     let indiceCritico = 0;
     let maiorIndice = poluicao[0][0];
     let regiaoMaior = 0;
     let diaMaior = 0;
-    let regiaoMenorMedia = 0;
-
+    
     for(let i = 0; i < poluicao.length; i++){
-        somaRegioes[i] = 0;
+        mediaRegioes[i] = 0;
         for(let j = 0; j < poluicao[i].length; j++){
-            somaRegioes[i] += poluicao[i][j]
+            mediaRegioes[i] += poluicao[i][j]
             if(poluicao[i][j] > 300){
                 indiceCritico++;
             }
@@ -59,9 +58,17 @@ function ex003(){
                 regiaoMaior = i;
                 diaMaior = j;
             }
-            if
         }
-        somaRegioes[i] = somaRegioes[i] / poluicao.length;
+        mediaRegioes[i] = mediaRegioes[i] / poluicao.length;
+    }
+
+    let regiaoMenorMedia;
+    let menorMedia = mediaRegioes[0];
+    for(let i = 0; i < 5; i++){
+        if(menorMedia > mediaRegioes[i]){
+            menorMedia = mediaRegioes[i];
+            regiaoMenorMedia = i;
+        }
     }
 
     // output
@@ -69,5 +76,5 @@ function ex003(){
     console.log(`\nValores da diagonal secundária: ${diagonalSecundaria.join(", ")}` + `\nMédia da diagonal principal: ${somaDiagSecundaria/diagonalSecundaria.length}`);
     console.log(`\nMaior índice de poluição: ${maiorIndice}, no dia ${diaMaior}, na região ${regioes[regiaoMaior]}`);
     console.log(`\nQuantidade de dias com índice crítico de poluição: ${indiceCritico}`);
-    console.log(`A região  que teve, em média, o menor índice de poluição ao longo dos 5 dias`)
+    console.log(`A região ${regioes[regiaoMenorMedia]} que teve, em média, o menor índice de poluição ao longo dos 5 dias`)
 }
