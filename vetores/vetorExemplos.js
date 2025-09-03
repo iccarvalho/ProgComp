@@ -32,6 +32,8 @@ alert(`${vet}`) // mostra todos os elementos do vetor
 
 alert(`${vet[i]}`) // mostra o elemento do indice indicado dentro do []
 
+vet.join() // separa os elementos com os parâmetros informados, caso não tenha parâmetros será transformado em string
+
 */
 
 // ler um vetor de 10 elementos inteiros. Some 10 nos elementos das posições pares; Multiplique por 5 nos elementos das posições ímpares.
