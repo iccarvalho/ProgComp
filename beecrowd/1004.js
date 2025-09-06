@@ -1,0 +1,10 @@
+// exercício 1004 do beecrowd by iccarvalho
+
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+let A = parseInt(lines[0]);
+let B = parseInt(lines[1]);
+let PROD = A * B;
+
+console.log(`PROD = ${PROD}`);
