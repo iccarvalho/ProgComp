@@ -63,7 +63,7 @@ function main(){
                 console.log("Opção inválida");
                 break;
         }
-    }while(opcao != 4)
+    }while(opcao != 5)
     console.log(alunos)
 }
 
