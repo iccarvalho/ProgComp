@@ -8,7 +8,7 @@ function cadastrarFuncionario(vetor){
     let funcionario = {
         nome: prompt("Informe o nome do funcionário"),
         cargo: prompt("Informe o cargo do funcionário"),
-        salario: Number(prompt("Informe o salário do funcionário")).toFixed(2)
+        salario: Number(prompt("Informe o salário do funcionário"))
     };
     vetor.push(funcionario);
 }
@@ -21,7 +21,7 @@ function listarFuncionarios(vetor){
 
 function aumentarSalario(vetor){
     for(let funcionario of vetor){
-        funcionario.salario *= 1.1;
+        funcionario.salario = Number((funcionario.salario * 1.1).toFixed(2));
     }
 }
 
@@ -60,7 +60,7 @@ function removerFuncionario(vetor){
 
 function mediaSalarial(vetor){
     let soma = 0;
-    for(let funcionario in vetor){
+    for(let funcionario of vetor){
         soma += funcionario.salario;
     }
     let media = soma / vetor.length;
@@ -69,7 +69,7 @@ function mediaSalarial(vetor){
 
 function promoverFuncionario(vetor){
     let soma = 0;
-    for(let funcionario in vetor){
+    for(let funcionario of vetor){
         soma += funcionario.salario;
     }
     let media = soma / vetor.length;
@@ -77,7 +77,7 @@ function promoverFuncionario(vetor){
     for(let i = 0; i < vetor.length; i++){
         if(vetor[i].salario < media){
             vetor[i].cargo = "Analista Júnior";
-            vetor[i].salario *= 1.15
+            vetor[i].salario = Number((vetor[i].salario * 1.15).toFixed(2));
         }
     }
 }
@@ -143,4 +143,4 @@ function main(){
     console.table(funcionarios)
 }
 
-main()
+//main()
