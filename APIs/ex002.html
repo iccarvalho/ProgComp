@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo APIs</title>
+</head>
+<body>
+    <h1>Galeria</h1>
+    <button onclick="carregarGaleria()">Carregar Galeria</button>
+    <div id="fotos"></div>
+    <script>
+        async function carregarGaleria(){
+            try{
+                const resposta = await fetch("https://jsonplaceholder.typicode.com/photos");
+                const galeria = await resposta.json();
+
+                const fotos = document.getElementById("fotos");
+                fotos.innerHTML = "";
+
+                for(let i = 0; i < galeria.legth; i++){
+                    const titulo = document.createElement("p");
+                    const img = document.createElement("img");
+
+                    titulo.textContent = galeria[i].title;
+                    fotos.appendChild(titulo);
+
+                    img.src = galeria[i].url;
+                    fotos.appendChild(img);
+                }
+
+            } catch(erro){
+                console.error("Erro ao carregar galeria:", erro);
+                alert("Não foi possível carregar os dados da API.");
+            }
+        }
+    </script>
+</body>
+</html>
