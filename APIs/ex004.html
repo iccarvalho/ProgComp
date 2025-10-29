@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo APIs</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        
+        h1{
+            padding: 10px;
+        }
+
+        .filme{
+            background-color: black;
+            color: white;
+            display: block;
+            width: 500px;
+            height: 550px;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Busca por Filmes</h1>
+    <div>
+        <input type="text" id="nome" placeholder="Nome do filme" autocomplete="off">
+        <button onclick="buscarFilme()">Buscar filme</button>
+    </div>
+    <section id="secao">
+
+    </section>
+    <script>
+        async function buscarFilme(){
+            try{
+                const nomeFilme = document.getElementById("nome").value;
+                const response = await fetch(`http://www.omdbapi.com/?s=${nomeFilme}&apikey=8a2379f2`)
+                const catalogo = await response.json();
+                
+                const secao = document.getElementById("secao")
+                secao.innerHTML = "";
+
+                catalogo.Search.forEach(filme => {
+                    const card = document.createElement("div");
+                    card.className = "filme";
+
+                    const titulo = document.createElement("h2");
+                    titulo.textContent = filme.Title;
+                    card.appendChild(titulo)
+
+                    const ano = document.createElement("p");
+                    ano.textContent = filme.Year;
+                    card.appendChild(ano);
+
+                    const tipo = document.createElement("p");
+                    tipo.textContent = filme.Type;
+                    card.appendChild(tipo)
+
+                    const poster = document.createElement("img");
+                    poster.src = filme.Poster;
+                    card.appendChild(poster)
+
+
+                    secao.appendChild(card)
+                    
+                });
+            } catch(erro){
+                console.error("Erro ao carregar filmes:", erro);
+                alert("Não foi possível carregar os dados da API.");
+            }
+        }
+    </script>
+</body>
+</html>
